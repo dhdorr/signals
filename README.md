@@ -7,12 +7,14 @@ Initialize, connect, emit, then disconnect.
 *__signals__* 🪢 allows for one-to-one, many-to-many, fan-in, and fan-out style communication between nodes[^1].
 
 ### Note
-I recommend using the [Event Bus](https://en.wikipedia.org/wiki/Observer_pattern) design pattern with *__signals__* 🪢. This design pattern enables "signal up, call down" paradigm, which is popular in Godot as it allows child nodes to easily communicate with their parent nodes. Alternatively, you can use the Signal Bus design pattern for communication between completely non-connected nodes.
+I recommend using the [Event Bus](https://en.wikipedia.org/wiki/Observer_pattern) design pattern with *__signals__* 🪢. This design pattern enables the "signal up, call down" paradigm, which is popular in Godot as it allows child nodes to easily communicate with their parent nodes. You can also use the [Event Bus](https://en.wikipedia.org/wiki/Observer_pattern) design pattern for communication between completely non-connected nodes.
 
 [^1]: Nodes are any piece of code that emits or connects to a signal. *__signals__* 🪢 has no built-in notion of nodes... yet
 
 # Future Goals
 I am primarily developing *__signals__* 🪢 for use in my own ongoing game development project. If I need more features, I will add them.
+
+I am considering a Message Queue style design pattern, specifically for use with game loops.
 
 # Examples
 ## [Basic Example](https://github.com/dhdorr/signals/blob/main/examples/ex2/main.go)
